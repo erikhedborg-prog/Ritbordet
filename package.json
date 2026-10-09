@@ -1,0 +1,20 @@
+{
+  "name": "ritbordet",
+  "version": "1.0.0",
+  "description": "Gemensam formgivning för kontorets webbappar: färger, typsnitt och riktlinjer.",
+  "license": "UNLICENSED",
+  "style": "ritbordet.css",
+  "files": ["ritbordet.css", "fonts.css", "fonts-google.html", "docs"],
+  "exports": {
+    "./ritbordet.css": "./ritbordet.css",
+    "./fonts.css": "./fonts.css"
+  },
+  "dependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-semi-condensed": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0"
+  },
+  "scripts": {
+    "test": "node test/check.mjs"
+  }
+}

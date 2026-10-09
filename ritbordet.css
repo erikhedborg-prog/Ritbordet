@@ -1,0 +1,96 @@
+/* Ritbordet: kontorets gemensamma formgivning (färger, typsnitt, mått).
+   Källan är https://github.com/erikhedborg-prog/ritbordet. Ändra här, inte i apparna. */
+:root {
+  --paper: #f1ece2;
+  --sheet: #faf7f1;
+  --sunken: #e8e1d3;
+  --line: #d9cfbe;
+  --line-strong: #8f826d;
+  --ink: #2a2620;
+  --ink-muted: #625a4e;
+  --accent: #2b4a6b;
+  --accent-hover: #203a56;
+  --accent-soft: #dfe3e3;
+  --on-accent: #faf7f1;
+  --focus: var(--accent);
+  --ok: #2f6438;
+  --ok-soft: #e1e8d6;
+  --rev: #7f5300;
+  --rev-soft: #f3e3bd;
+  --rev-line: #c9a35a;
+  --lib: #664670;
+  --lib-soft: #e9dfe6;
+  --danger: #9e3324;
+  --danger-soft: #f2dcd3;
+  --shadow-pop: 0 1px 2px rgba(42, 38, 32, 0.08), 0 8px 24px rgba(42, 38, 32, 0.14);
+  --backdrop: rgba(27, 25, 22, 0.45);
+
+  --font-display: 'Barlow Semi Condensed', 'Arial Narrow', Arial, sans-serif;
+  --font-sans: Barlow, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1b1916;
+    --sheet: #24211d;
+    --sunken: #2e2a25;
+    --line: #3b362f;
+    --line-strong: #7a705f;
+    --ink: #ece5d8;
+    --ink-muted: #a99f8f;
+    --accent: #93b2d1;
+    --accent-hover: #adc5dd;
+    --accent-soft: #283340;
+    --on-accent: #141c26;
+    --ok: #8ec79a;
+    --ok-soft: #22301f;
+    --rev: #e2b764;
+    --rev-soft: #3a2f1b;
+    --rev-line: #7d6331;
+    --lib: #c9a8d2;
+    --lib-soft: #33263a;
+    --danger: #f0947f;
+    --danger-soft: #3e231d;
+    --shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+    --backdrop: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1b1916;
+  --sheet: #24211d;
+  --sunken: #2e2a25;
+  --line: #3b362f;
+  --line-strong: #7a705f;
+  --ink: #ece5d8;
+  --ink-muted: #a99f8f;
+  --accent: #93b2d1;
+  --accent-hover: #adc5dd;
+  --accent-soft: #283340;
+  --on-accent: #141c26;
+  --ok: #8ec79a;
+  --ok-soft: #22301f;
+  --rev: #e2b764;
+  --rev-soft: #3a2f1b;
+  --rev-line: #7d6331;
+  --lib: #c9a8d2;
+  --lib-soft: #33263a;
+  --danger: #f0947f;
+  --danger-soft: #3e231d;
+  --shadow-pop: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.5);
+  --backdrop: rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}

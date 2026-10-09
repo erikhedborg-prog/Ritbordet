@@ -1,0 +1,8 @@
+/* Typsnitten för appar som byggs med npm (Vite). Filerna packas in i appen så att den fungerar offline.
+   Latin räcker för svenska. */
+@import '@fontsource/barlow/latin-400.css';
+@import '@fontsource/barlow/latin-500.css';
+@import '@fontsource/barlow/latin-600.css';
+@import '@fontsource/barlow-semi-condensed/latin-600.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
