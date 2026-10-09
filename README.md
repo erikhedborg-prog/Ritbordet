@@ -18,7 +18,7 @@ Bläddringsbar version med exempel: https://claude.ai/artifact/AdBDTJispmuRVLriP
 **App som byggs med npm (Vite, React):**
 
 ```sh
-npm i github:erikhedborg-prog/ritbordet#v1.0.0
+npm i github:erikhedborg-prog/ritbordet#<commit>
 ```
 
 ```ts
@@ -33,7 +33,7 @@ Lägg till `woff2` i `workbox.globPatterns` om appen är en PWA, så att typsnit
 **Enkel HTML-app med `build.sh`:** bygget hämtar `ritbordet.css` för en bestämd version och bakar in den i `index.html`:
 
 ```sh
-RITBORDET=v1.0.0
+RITBORDET=<commit>
 curl -fsSL "https://raw.githubusercontent.com/erikhedborg-prog/ritbordet/$RITBORDET/ritbordet.css"
 ```
 
@@ -41,13 +41,17 @@ Se `build.sh` i Ritningslänkaren eller PBL-lathunden.
 
 I appens egen CSS används bara variablerna, aldrig färgkoder: `var(--accent)`, `var(--ink-muted)`, `var(--rev-soft)` och så vidare. Då följer mörkt läge med av sig självt.
 
+## Versioner
+
+Apparna pekar på en bestämd version av Ritbordet: en commit här (`<commit>` ovan, hela 40-teckens-id:t).
+En ändring här slår därför inte igenom förrän varje app uppdateras, och då kan man förhandsgranska appen innan den publiceras.
+Versionsnumret i `package.json` och en kommentar i appen säger vilken version det är.
+
 ## Ändra formgivningen
 
 1. Ändra `ritbordet.css` här och kör `node test/check.mjs`. Testet kontrollerar att mörkt läge är komplett och att all text är läsbar.
-2. Höj versionen i `package.json` och skapa en ny tagg, t.ex. `v1.1.0`.
-3. Uppdatera apparna till den nya taggen: `npm i github:erikhedborg-prog/ritbordet#v1.1.0` respektive `RITBORDET=` i `build.sh`.
-
-Apparna pekar på en bestämd version, så en ändring här slår inte igenom förrän varje app uppdateras. Då kan man förhandsgranska varje app innan den publiceras.
+2. Höj versionen i `package.json` och för in ändringen i `main`.
+3. Uppdatera apparna till den nya commiten: `npm i github:erikhedborg-prog/ritbordet#<commit>` respektive `RITBORDET=` i `build.sh`.
 
 ## Appar som använder Ritbordet
 
