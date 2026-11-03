@@ -55,8 +55,19 @@ Versionsnumret i `package.json` och en kommentar i appen säger vilken version d
 
 ## Appar som använder Ritbordet
 
-- [Rumsbeskrivning](https://github.com/erikhedborg-prog/rumsbeskrivning)
-- [Teknisk beskrivning](https://github.com/erikhedborg-prog/teknisk-beskrivning)
-- [Ritningslänkaren](https://github.com/erikhedborg-prog/ritningslankaren)
-- [PBL-lathunden](https://github.com/erikhedborg-prog/pbl-lathund)
-- [Rumsinventering ur 360-panoramor](https://github.com/erikhedborg-prog/rumsinventering-panorama) (granskningssidan, inbyggd kopia)
+Kontorets webbappar ligger i [app-samling](https://github.com/erikhedborg-prog/app-samling), en mapp per app under `apps/`.
+Alla pekar i dag på commit `909e3d9`.
+
+Med npm (`package.json`): Rumsbeskrivning, Teknisk beskrivning, Fråga–svar, Dokumentgeneratorn, Resursplaneringen,
+Avfallsutrymme, Måttbanken och GAJD-portalen.
+
+Med `build.sh` (`RITBORDET=`): Ritningslänkaren, PBL-lathunden och Egenkontrollen.
+
+Utanför app-samling: [Rumsinventering ur 360-panoramor](https://github.com/erikhedborg-prog/rumsinventering-panorama)
+(granskningssidan, inbyggd kopia).
+
+För att se vilka appar som ligger efter, kör i app-samling:
+
+```sh
+grep -rho 'ritbordet#[0-9a-f]*\|RITBORDET=[0-9a-f]*' apps/*/package.json apps/*/build.sh | sort | uniq -c
+```
